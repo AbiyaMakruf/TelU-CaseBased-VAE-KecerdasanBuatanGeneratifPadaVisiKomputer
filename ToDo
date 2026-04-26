@@ -1,4 +1,6 @@
 # PROJECT: KL-VAE & VQ-VAE Implementation and Analysis
+## Source Data
+https://storage.googleapis.com/learning-datasets/Resources/anime-faces.zip
 
 ## Tahap 1: Model Implementation & Training
 
