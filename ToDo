@@ -1,0 +1,71 @@
+# PROJECT: KL-VAE & VQ-VAE Implementation and Analysis
+
+## Tahap 1: Model Implementation & Training
+
+### 1. Implementasi KL-VAE
+- [ ] Buat CNN Encoder (output: latent mean & logvar)
+- [ ] Implementasi reparameterization trick untuk sampling
+- [ ] Buat CNN Decoder untuk rekonstruksi image
+- [ ] Set latent dimension = 32
+- [ ] Definisikan loss function = MAE/MSE + KL divergence
+- [ ] Setup optimizer (Adam) dengan learning rate scheduler
+
+### 2. Implementasi VQ-VAE
+- [ ] Buat Encoder (output: quantized vectors)
+- [ ] Setup codebook (512 codes, dimension 64)
+- [ ] Buat Decoder untuk rekonstruksi image
+- [ ] Definisikan loss function = reconstruction + commitment + codebook
+- [ ] Setup optimizer (Adam) dengan learning rate scheduler
+
+### 3. Training Kedua Model
+- [ ] Gunakan PyTorch untuk implementasi
+- [ ] Train KL-VAE pada dataset yang sama seperti GAN case-based
+- [ ] Train VQ-VAE pada dataset yang sama
+- [ ] Train untuk 20-100 epochs (tergantung subset size dan waktu)
+
+### 4. Evaluasi Rekonstruksi (Kedua Model)
+- [ ] Plot original dan reconstructed images dari test set
+- [ ] Hitung MSE atau PSNR untuk kedua model
+- [ ] Bandingkan kualitas rekonstruksi
+
+### 5. Random Sampling (Kedua Model)
+- [ ] KL-VAE: Sample latent vectors dari standard Gaussian N(0,1) → decode
+- [ ] VQ-VAE: Randomly select codes dari codebook → decode
+- [ ] Visualisasikan generated images
+
+---
+
+## Tahap 2: Inference, Visualization, & Evaluation
+
+### 6. Latent Interpolation
+- [ ] KL-VAE: Pilih 2 images, interpolasi antara latent vectors mereka
+- [ ] VQ-VAE: Pilih 2 images, interpolasi antara codebook indices mereka
+- [ ] Plot interpolated images untuk kedua model
+
+### 7. Latent Space Visualization
+- [ ] KL-VAE: Gunakan t-SNE atau PCA pada latent vectors dari test images
+- [ ] KL-VAE: Color by attribute (smile, gender, atau label lain dari CelebA)
+- [ ] KL-VAE: Plot hasil dalam 2D
+- [ ] VQ-VAE: Train simple PixelCNN atau PixelSNAIL pada codebook indices (optional)
+- [ ] VQ-VAE: Sample code indices dari prior → decode
+- [ ] VQ-VAE: Visualisasikan hasil generated images
+
+### 8. Perbandingan Komprehensif KL-VAE vs VQ-VAE
+- [ ] Reconstruction Quality: bandingkan MSE, PSNR, dan visual quality
+- [ ] Latent/Codebook Structure: analisis distribusi latent space atau codebook usage
+- [ ] Sampling Ability: bandingkan kualitas generated samples
+- [ ] Inference Behavior: analisis kecepatan dan karakteristik inference
+
+---
+
+## Tahap 3: Additional TASKS
+
+### 9. Visualisasi & Dokumentasi
+- [ ] Buat visualization untuk codebook usage atau latent space
+- [ ] Buat visualization untuk interpolations di latent/code space
+- [ ] Buat comparison visualization antara hasil VAE dan GAN
+
+### 10. Presentasi Slide
+- [ ] Buat lecture slide untuk KL-VAE (max 15 slides)
+- [ ] Setiap slide harus punya ide yang jelas
+- [ ] Include: konsep, arsitektur, loss function, hasil eksperimen
