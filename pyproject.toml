@@ -1,0 +1,37 @@
+[project]
+name = "telu-casebased-vae-kecerdasanbuatangeneratifpadavisikomputer"
+version = "0.1.0"
+description = "telu-casebased-vae-kecerdasanbuatangeneratifpadavisikomputer (PyTorch CUDA 12.x)"
+requires-python = ">=3.10,<=3.12"
+dependencies = [
+  "torch>2",
+  "torchvision>=0.15",
+  "torchaudio>2",
+  "matplotlib~=3.9.2",
+  "tqdm~=4.67.1",
+  "ipykernel>=6.29,<7",
+  "jupyterlab>=4.2,<5",
+  "torchmetrics>=1.4,<2",
+  "torch-fidelity>=0.3,<0.4",
+  "lpips>=0.1.4,<0.2",
+  "isort>=8.0.1",
+  "pylint>=4.0.5",
+  "pandas>=2.3.3",
+]
+
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
+torchaudio = { index = "pytorch-cu128" }
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
