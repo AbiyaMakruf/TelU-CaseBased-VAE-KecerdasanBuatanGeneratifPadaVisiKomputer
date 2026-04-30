@@ -258,8 +258,8 @@ Where:
 
 | Model | MSE | PSNR | Quality |
 |-------|-----|------|---------|
-| KL-VAE | 0.2210 | 12.58 dB | Good |
-| VQ-VAE | 0.1017 | 15.96 dB | **Excellent** |
+| KL-VAE | 0.193525 | 13.1630dB | Good |
+| VQ-VAE | 0.078507 | 17.0781dB | **Excellent** |
 
 **Performance Analysis:**
 - VQ-VAE achieves **~54% lower MSE** than KL-VAE
